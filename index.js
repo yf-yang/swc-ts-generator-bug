@@ -5,61 +5,41 @@ function test() {
             case 0:
                 if (!!False()) return [
                     3,
-                    5
+                    2
                 ];
                 // execute this line
                 while(!False()){
                     // execute this line
-                    if (False()) {
-                    // noop
-                    } else {
-                        // execute this line
-                        return [
-                            3,
-                            5
-                        ];
-                    }
+                    return [
+                        3,
+                        2
+                    ];
                 }
                 // execute this line
                 if (False()) {
+                    // NOT execute this line
                     return [
                         3,
-                        5
+                        2
                     ];
                 }
-                _state.label = 1;
-            case 1:
-                if (!False()) return [
-                    3,
-                    3
-                ];
-                return [
-                    4,
-                    "unreachable"
-                ];
-            case 2:
-                _state.sent();
-                return [
-                    3,
-                    1
-                ];
-            case 3:
                 // execute this line
                 return [
                     4,
                     "correct"
                 ];
-            case 4:
+            case 1:
                 _state.sent();
                 return [
                     2
                 ];
-            case 5:
+            case 2:
+                // NOT execute this line
                 return [
                     4,
                     "wrong"
                 ];
-            case 6:
+            case 3:
                 _state.sent();
                 return [
                     2

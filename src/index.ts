@@ -3,26 +3,20 @@ function* test() {
     // execute this line
     while (!False()) {
       // execute this line
-      if (False()) {
-        // noop
-      } else {
-        // execute this line
-        break;
-      }
+      break;
     }
     // execute this line
     if (False()) {
+      // NOT execute this line
       break;
-    }
-
-    while (False()) {
-      yield "unreachable";
     }
 
     // execute this line
     yield "correct";
     return;
   }
+
+  // NOT execute this line
   yield "wrong";
   return;
 }
